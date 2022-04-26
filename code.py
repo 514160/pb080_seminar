@@ -1,12 +1,12 @@
-import yaml
-import subprocess
 import hashlib
+import yaml
+from subprocess import *
 import subprocess
 import flask
 
 
 def transcode_file(request, filename):
-    command = 'ffmpeg -i "{source}" output_file.mpg'.format(source=file)
+    command = 'ffmpeg -i "{source}" output_file.mpg'.format(source=filename)
     subprocess.call(command, shell=True)
 
 
